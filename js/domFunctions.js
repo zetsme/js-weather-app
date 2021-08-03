@@ -6,7 +6,7 @@ import {
   setBackgroundImage,
 } from './iconsAndBackgrounds.js';
 
-import translation from './tranlate.js';
+import translation from './translate.js';
 
 export const displayError = (errMsg) => {
   updateWeatherLocationHeader(errMsg);
