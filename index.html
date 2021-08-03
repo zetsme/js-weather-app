@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="index.css">
+  <script type="module" src="js/index.js"></script>
+</head>
+
+<body>
+  <main class="fade-in">
+    <!-- Header -->
+    <header class="fade-in">
+      <form class="form" id="search-form">
+        <input type="text" class="form__input" id="search-input">
+        <button class="form__btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </header>
+
+    <!-- Buttons -->
+    <div class="buttons" class="fade-in">
+      <button data-language='location-btn' class="buttons__location" id="location-btn">
+        <i class="fas fa-map-marker-alt"></i>
+      </button>
+      <button data-language='home-btn' class="buttons__home" id="home-btn">
+        <i class="fas fa-home"></i>
+      </button>
+      <button data-language='save-btn' class="buttons__save" id="save-btn">
+        <i class="far fa-save"></i>
+      </button>
+      <button data-language='unit-btn' class="buttons__units" id="units-btn">
+        <i class="fas fa-exchange-alt"></i>
+      </button>
+      <button data-language='refresh-btn' class="buttons__refresh" id="refresh-btn">
+        <i class="fas fa-sync"></i>
+      </button>
+      <select data-language='language-select' name="language" id="language-select" class="buttons__select">
+        <option value="en">en</option>
+        <option value="ru">ru</option>
+        <option value="uk">uk</option>
+      </select>
+
+    </div>
+
+    <!-- Current -->
+    <section class="current fade-in" id="current-section">
+      <h2 class="current__location" id="current-location">Current Conditions</h2>
+      <div class="current__forecast" id="current-forecast">
+      </div>
+    </section>
+
+    <!-- Daily -->
+    <section class="daily fade-in" id="daily-section"></section>
+
+  </main>
+</body>
+
+</html>

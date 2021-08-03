@@ -1,0 +1,92 @@
+@mixin mq($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+  font-family: 'Oswald', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main {
+  width: 100%;
+  max-width: 700px;
+  max-height: 1050px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  backdrop-filter: blur(5px) saturate(99%);
+  background-color: rgba(17, 25, 40, 0.43);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  color: white;
+  padding: 0.5rem;
+  row-gap: .5rem;
+  @include mq(500px) {
+    row-gap: 1rem;
+  }
+}
+
+img {
+  display: block;
+}
+select {
+  font-family: inherit;
+  text-transform: uppercase;
+  padding: 0px 0px 5px 5px;
+}
+
+button,
+select {
+  border: none;
+  min-width: 40px;
+  min-height: 40px;
+  cursor: pointer;
+  @include mq(600px) {
+    min-width: 60px;
+    min-height: 60px;
+  }
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+.zero-vis {
+  visibility: hidden;
+  opacity: 0;
+}
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,31 @@
+.daily {
+  margin-top: auto;
+  display: flex;
+  overflow-x: auto;
+
+  &__weather {
+    text-align: center;
+  }
+  @include mq(500px) {
+    &__max,
+    &__min,
+    &__date {
+      font-size: 1.2rem;
+    }
+    &__dayWeek {
+      font-size: 1.5rem;
+    }
+  }
+  @include mq(700px) {
+    &::-webkit-scrollbar {
+      height: 15px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

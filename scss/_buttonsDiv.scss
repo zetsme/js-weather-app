@@ -1,0 +1,23 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.3rem;
+  align-items: center;
+
+  @include mq(500px) {
+    justify-content: center;
+  }
+  & > * {
+    font-size: 1.5rem;
+    border-radius: 10px;
+
+    @include mq(500px) {
+      margin: 0 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+}

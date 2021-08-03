@@ -1,0 +1,53 @@
+.current {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__location {
+    text-align: center;
+    @include mq(500px) {
+      font-size: 2rem;
+    }
+    @include mq(700px) {
+      font-size: 4rem;
+    }
+  }
+  &__forecast {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+    @include mq(500px) {
+      row-gap: 1rem;
+    }
+  }
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    i {
+      font-size: 4rem;
+    }
+  }
+  &__temperature {
+    font-size: 2.5rem;
+    @include mq(700px) {
+      font-size: 4rem;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    @include mq(500px) {
+      font-size: 1.5rem;
+      column-gap: 2rem;
+    }
+    @include mq(700px) {
+      font-size: 1.7rem;
+    }
+  }
+}

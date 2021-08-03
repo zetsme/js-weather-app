@@ -1,0 +1,29 @@
+.form {
+  background-color: #fff;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  padding-left: 1rem;
+  &__input {
+    flex-grow: 1;
+    border: none;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  &__btn {
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    &:hover,
+    &:focus {
+      text-shadow: 4px 2px 5px grey;
+    }
+    i {
+      font-size: 1.5rem;
+    }
+  }
+  &:hover,
+  &:focus-within {
+    box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.5);
+  }
+}
